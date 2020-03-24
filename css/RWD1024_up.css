@@ -1,0 +1,62 @@
+/*1024up*/
+/*
+   1024up
+   1024px~1366px 橫式 iPad Pro in landscape
+   1024px~1366px 直式 iPad Pro in portrait
+*/
+
+/*1024up*/
+@media (min-width: 1200px) {
+    
+
+}
+
+/*iPad Pro in landscape 橫式*/
+@media only screen and (min-device-width : 1024px) and (max-device-width : 1366px) and (orientation : landscape) {}
+
+/*iPad Pro in portrait 直式*/
+@media only screen and (min-device-width : 1024px) and (max-device-width : 1366px) {
+    /*登入頁*/
+    .login_wrap input{
+        width: 50%;
+        font-size: 1.5em;
+        height: 65px;
+        margin-bottom: 4%;
+    }
+    .login_btn{
+        width: 50%;
+        line-height:75px;
+        height: 75px;
+        font-size: 1.5em;
+    }
+    .logo img {
+        width: 70%;
+    }
+    .ver_wrap a{
+        width: 45%;
+        height: 55px;
+        line-height: 55px;
+        font-size: 1.5em;
+    }
+    .ver_wrap span{
+        font-size: 1.5em;
+    }
+    /*首頁*/
+    .header select{
+        font-size: 1.2em;
+    }
+    .pushy a, .push_a{
+        font-size: 1.5em;
+    }
+    .content .top{
+        font-size: 1.5em;
+    }
+    /*病患列表*/
+    .p_list{
+        font-size: 1.5em;
+    }
+    /*次選單*/
+    .nursing ul li{
+        font-size: 1.5em;
+    }
+}

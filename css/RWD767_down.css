@@ -1,0 +1,61 @@
+/*768down*/
+/*
+    480~768
+    320~480  通用 ========================= 手機
+    320down  通用 ========================= 小型手機
+*/
+
+
+/*480~768*/
+@media (max-width: 768px) {
+
+
+}
+
+/*320~480*/
+/*通用 ========================= 手機*/
+@media only screen and (max-width : 480px) {
+    /*intake*/
+    .intake .patient_content .intake_top label{
+        min-width: 4em;
+        font-size: 1em;
+    }
+    .intake .patient_content  select{
+        font-size: 14px;
+    }
+    .intake  .insert input{
+        max-width: 9em;
+    }
+
+}
+
+/*320down*/
+/*小螢幕尺寸*/
+/*通用 ========================= 小型手機*/
+@media only screen and (max-width : 320px){
+    /*intake*/
+    .intake .patient_content .intake_top label{
+        min-width: 4em;
+        font-size: 1em;
+    }
+    .intake .patient_content  select{
+        font-size: 14px;
+    }
+    .intake  .insert input{
+        max-width: 9em;
+    }
+    /*coma*/
+    .coma_wrap{
+        text-align: left;
+    }
+    .coma_wrap .flex {
+        display: inline-block;
+        width: 100%;
+    }
+    /*fallrisk*/
+    .fallrisk .top{
+        font-size: 1em;
+    }
+
+}
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>三軍總醫院NIS護理資訊系統</title>
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/pushy.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/RWD1024_up.css">
+    <link rel="stylesheet" href="css/RWD768_up.css">
+    <link rel="stylesheet" href="css/RWD767_down.css">
+    <link rel="stylesheet" href="css/RWD_special.css">
+</head>
+<body class="content">
+<!-- Pushy Menu -->
+<nav class="pushy pushy-left">
+    <div class="pushy-content">
+        <div class="top">
+            <div>demo</div>
+            <div>心血管一病區</div>
+        </div>
+        <div class="title">掃描</div>
+        <ul>
+            <li class="push_a">掃描腕帶</li>
+        </ul>
+        <div class="title">功能</div>
+        <ul>
+            <li class="pushy-link"><a href="page/PatientList.html" class="changeSrc">病人清單</a></li>
+            <li class="pushy-link"><a href="page/Monitoring_Submenu.html" class="changeSrc">生理監測</a></li>
+            <li class="pushy-link"><a href="" class="changeSrc">醫囑執行</a></li>
+            <li class="pushy-link"><a href="page/NursingAssessment_Submenu.html" class="changeSrc">護理評估</a></li>
+            <li class="pushy-link"><a href="" class="changeSrc">護理指導</a></li>
+            <li class="pushy-link"><a href="" class="changeSrc">訪視紀錄</a></li>
+            <li class="pushy-link"><a href="index.html">登出</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- Site Overlay -->
+<div class="site-overlay"></div>
+<!-- content -->
+<div class="page-wrapper" id="container">
+    <div class="header">
+        <div class="container-fluid between">
+            <div class="flex">
+                <div class="menu-btn icon">
+                    <div class="iconSpan">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="qrcode">
+                <img src="image/scan.png" alt="">
+            </div>
+            <div class="main_menu flex">
+                <div class="pFormItem">
+                    <div class="divFormItem slDivFormItem">
+                        <select class="formItem selectFormItem">
+                            <option value="">52AAA病房</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="pFormItem">
+                    <div class="divFormItem slDivFormItem">
+                        <select class="formItem selectFormItem">
+                            <option value="">管理員</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container">
+            <iframe id="myIframe" src="page/Patientlist.html" width="100%" frameborder="0" scrolling="yes"></iframe>
+        </div>
+    </div>
+    <div class="footer T_center">
+        <a href="content.html"><img src="image/home.png" alt=""></a>
+    </div>
+</div>
+<!--JS -->
+<script type="text/javascript" src="plugins/jquery/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="plugins/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="plugins/pushy.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script>
+    window.addEventListener('message', function (msg) { getChildrenIframeHeight(msg.data); }, false);
+    function getChildrenIframeHeight(src) {
+        setChildrenIframeHeight(src);
+    }
+    function setChildrenIframeHeight(src) {
+        $("#myIframe").attr("src", src);
+    }
+</script>
+</body>
+</html>

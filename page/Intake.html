@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>三軍總醫院NIS護理資訊系統</title>
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/pushy.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/RWD1024_up.css">
+    <link rel="stylesheet" href="../css/RWD768_up.css">
+    <link rel="stylesheet" href="../css/RWD767_down.css">
+    <link rel="stylesheet" href="../css/RWD_special.css">
+</head>
+<body class="iframepage intake">
+<div class="main">
+    <iframe id="Iframe" src="../page/PatienDetail.html" width="100%" frameborder="0" scrolling="yes"></iframe>
+    <div class="patient_content">
+        <div class="intake_top">
+            <!--時間-->
+            <div class="formList flex">
+                <label>時間：</label>
+                <div class="pFormItem">
+                    <div class="divFormItem dateDivFormItem">
+                        <input class="formItem dateFormItem" type="text" value="2020/2/14"/>
+                    </div>
+                </div>
+                <div class="pFormItem">
+                    <div class="divFormItem timeDivFormItem">
+                        <input class="formItem timeFormItem" type="text" value="10:25"/>
+                    </div>
+                </div>
+            </div>
+            <!--類型-->
+            <div class="formList flex">
+                <label>類型：</label>
+                <div class="pFormItem">
+                    <div class="divFormItem slDivFormItem">
+                        <select id="showselect" class="formItem selectFormItem">
+                            <option value="1">注射量_IV</option>
+                            <option value="2">尿量_自解量</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="pFormItem">
+                    <div class="divFormItem slDivFormItem">
+                        <select class="formItem selectFormItem">
+                            <option>無法計量</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!--注射量_IV-->
+            <div class="list1" style="display: block">
+            <div class="formList flex insert"><label>輸入量：</label>
+                <div class="pFormItem">
+                    <div class="divFormItem txDivFormItem">
+                        <input class="formItem textFormItem" type="text"/>
+                        <label class="txBkFormItem">CC</label>
+                    </div>
+                </div>
+            </div>
+            <div class="formList flex">  <label>藥囑：</label>
+                <div class="pFormItem">
+                    <div class="divFormItem txDivFormItem">
+                        <input class="formItem textFormItem" type="text"/>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!--尿量_自解量-->
+            <div class="list2" style="display: none">
+                <div class="formList flex insert"><label>輸出量：</label>
+                    <div class="pFormItem">
+                        <div class="divFormItem txDivFormItem">
+                            <input class="formItem textFormItem" type="text"/>
+                        </div>
+                    </div>
+                    <div class="pFormItem">
+                        <div class="divFormItem slDivFormItem">
+                            <select  class="formItem selectFormItem">
+                                <option value="1">CC</option>
+                                <option value="2">ML</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="formList flex insert">  <label>顏色：</label>
+                    <div class="pFormItem">
+                        <div class="divFormItem slDivFormItem">
+                            <select  class="formItem selectFormItem">
+                                <option value="1">其他</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="pFormItem">
+                        <div class="divFormItem txDivFormItem">
+                            <input class="formItem textFormItem" type="text"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="formList flex insert">  <label>性質：</label>
+                    <div class="pFormItem">
+                        <div class="divFormItem slDivFormItem">
+                            <select  class="formItem selectFormItem">
+                                <option value="1">其他</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="pFormItem">
+                        <div class="divFormItem txDivFormItem">
+                            <input class="formItem textFormItem" type="text"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="formList flex">  <label>尿比重：</label>
+                    <div class="pFormItem">
+                        <div class="divFormItem txDivFormItem">
+                            <input class="formItem textFormItem" type="text"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--護理紀錄帶入-->
+        <div class="intake_bottom flex">
+            <div class="choiceBox">
+                <div class="pFormItem">
+                    <div class="divFormItem ckDivFormItem">
+                        <input id="form22_1" name="form22" type="checkbox" class="formItem checkboxFormItem">
+                        <label for="form22_1"></label>
+                    </div>
+                </div>
+            </div>
+            <label>帶入護理紀錄</label>
+            <div class="pFormItem">
+                <div class="divFormItem slDivFormItem">
+                    <select class="formItem selectFormItem">
+                        <option>O</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!--JS -->
+<script type="text/javascript" src="../plugins/jquery/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../plugins/pushy.js"></script>
+<script type="text/javascript" src="../js/custom.js"></script>
+<script>
+    $('.list2').hide();
+    $("#showselect").change(function(){
+        var options=$("#showselect option:selected");
+        if (options.val()=='1'){
+            $('.list1').fadeIn();
+            $('.list2').hide();
+        }else if(options.val()=='2'){
+            $('.list2').fadeIn();
+            $('.list1').hide();
+        }
+
+
+    });
+</script>
+</body>
+</html>

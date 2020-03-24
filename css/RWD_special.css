@@ -1,0 +1,56 @@
+/*812以下 (特殊手機格式)*/
+/*
+   直式-
+        320px~568px iPhone 5 & 5S portrait直式
+        375px~667px iPhone 6 portrait直式
+   橫式- 320~812
+        320px~480px iPhone 4 landscape橫式
+        320px~568px iPhone 5 & 5S landscape橫式
+        375px~667px iPhone 6 landscape橫式
+        375px~812px iphone X 橫式
+        414px~736px *iPhone 6 plus landscape橫式
+*/
+
+
+/*iPhone 5 & 5S portrait直式*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) {
+
+
+}
+
+/*iPhone 6 portrait直式*/
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px)and (orientation : portrait) {
+
+  
+}
+
+/*iPhone 4 landscape橫式*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) {
+
+  
+}
+
+/*iPhone 5 & 5S landscape橫式*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
+
+}
+
+
+/*iPhone 6 landscape橫式*/
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) {
+  
+}
+
+/*iphone X 橫式*/
+@media only screen and (min-device-width : 375px) and (max-device-width : 812px) and (orientation : landscape) {
+   
+
+}
+
+
+/**iPhone 6 plus landscape橫式*/
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : landscape) {
+
+   
+
+}

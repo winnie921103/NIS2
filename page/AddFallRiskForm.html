@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>三軍總醫院NIS護理資訊系統</title>
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/pushy.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/RWD1024_up.css">
+    <link rel="stylesheet" href="../css/RWD768_up.css">
+    <link rel="stylesheet" href="../css/RWD767_down.css">
+    <link rel="stylesheet" href="../css/RWD_special.css">
+</head>
+<body class="iframepage fallrisk addfallriskform">
+<div class="main">
+    <iframe id="Iframe" src="../page/PatienDetail.html" width="100%" frameborder="0" scrolling="yes"></iframe>
+    <div class="patient_content">
+        <div class="intake_top">
+            <div class="top">
+                <span>住院病人跌倒危險因子評估表</span>
+                <a href="" class="btn">存檔</a>
+            </div>
+            <!--時間-->
+            <div class="formList flex">
+                <label>紀錄日期：</label>
+                <div class="pFormItem">
+                    <div class="divFormItem dateDivFormItem">
+                        <input class="formItem dateFormItem" type="text" value="2020/2/14"/>
+                    </div>
+                </div>
+                <div class="pFormItem">
+                    <div class="divFormItem timeDivFormItem">
+                        <input class="formItem timeFormItem" type="text" value="10:25"/>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="formList flex">
+        <div class="choiceBox">
+            <div class="pFormItem">
+                <div class="divFormItem ckDivFormItem">
+                    <input id="form22_1" name="form22" type="checkbox" class="formItem checkboxFormItem">
+                    <label for="form22_1"></label>
+                </div>
+            </div>
+        </div>
+        <label>無法評估</label>
+        </div>
+        <div class="content">
+            <div class="title title_o">1.意識狀態：</div>
+            <div class="tips">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary active">
+                        <input type="radio" name="options" id="" autocomplete="off">(0)清醒可配合、意識昏迷
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="" autocomplete="off">(1)認知功能障礙、意識混亂
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="title title_o">2.疾病診斷：</div>
+            <div class="tips">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="" autocomplete="off">(0)單一疾病診斷
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="" autocomplete="off">(1)二個(含)以上正在治療的疾病診斷
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="title title_o">3.跌倒病史：</div>
+            <div class="tips">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="" autocomplete="off"  checked>(0)不曾跌倒
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="" autocomplete="off">(1)曾經有住院期間跌倒病史、過去一年
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="title title_o">4.使用易致跌倒藥物：</div>
+            <div class="tips">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="" autocomplete="off"  checked>(0)未使用、臥床不動
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="" autocomplete="off">(1)使用鎮靜/止痛/安眠/利尿/降血壓/抗癲癇/降血糖藥物/其他
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="title title_o">5.頭暈/失眠/視力模糊：</div>
+            <div class="tips">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="" autocomplete="off"  checked>(0)無、臥床不動
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="" autocomplete="off">(1)頭暈/虛弱/姿勢性低血壓、失眠、視力模糊/單眼或雙眼失明
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="title title_o">6.管路留置/失禁/頻尿/腹瀉：</div>
+            <div class="tips">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="" autocomplete="off"  checked>(0)無、臥床不動
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="" autocomplete="off">(1)因大小便失禁、頻尿或腹瀉需頻繁下床如廁、連接靜脈輸液/有引流管放置/生理監視器使用
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="title title_o">7.輔具使用：</div>
+            <div class="tips">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="" autocomplete="off"  checked>(0)臥床不動、自行走動平穩
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="" autocomplete="off">(1)步態不穩、攙扶或使用輔具才可站起、移位或行走須他人協助或使用輔具
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="title title_o">8.執意下床：</div>
+            <div class="tips">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="" autocomplete="off"  checked>(0)臥床不動、均請求協助下床
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="" autocomplete="off">(1)無法配合床欄/床欄護套使用、不能獨自下床卻執意自行下床、主要照顧者為年老或行動不便者
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="title title_b">總分：</div>
+            <div class="tips">
+                <span>4</span>
+            </div>
+        </div>
+    </div>
+    <!--JS -->
+    <script type="text/javascript" src="../plugins/jquery/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../plugins/pushy.js"></script>
+    <script type="text/javascript" src="../js/custom.js"></script>
+</body>
+</html>

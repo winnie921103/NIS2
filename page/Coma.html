@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>三軍總醫院NIS護理資訊系統</title>
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/pushy.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/RWD1024_up.css">
+    <link rel="stylesheet" href="../css/RWD768_up.css">
+    <link rel="stylesheet" href="../css/RWD767_down.css">
+    <link rel="stylesheet" href="../css/RWD_special.css">
+</head>
+<body class="iframepage coma">
+<div class="main">
+    <iframe id="Iframe" src="../page/PatienDetail.html" width="100%" frameborder="0" scrolling="yes"></iframe>
+    <div class="patient_content">
+        <div class="intake_top">
+            <!--時間-->
+            <div class="formList flex">
+                <label>時間：</label>
+                <div class="pFormItem">
+                    <div class="divFormItem dateDivFormItem">
+                        <input class="formItem dateFormItem" type="text" value="2020/2/14"/>
+                    </div>
+                </div>
+                <div class="pFormItem">
+                    <div class="divFormItem timeDivFormItem">
+                        <input class="formItem timeFormItem" type="text" value="10:25"/>
+                    </div>
+                </div>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tips">
+                    ?
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="tips" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="ModalCenterTitle">昏迷指標</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="content">
+                                    <div class="title title_r">E睜眼反射：</div>
+                                    <div class="tips">
+                                        <p>(4)自動</p>
+                                        <p>(3)對聲音刺激</p>
+                                        <p>(2)對痛刺激</p>
+                                        <p>(1)無反應</p>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="title title_b">M最佳運動反應：</div>
+                                    <div class="tips">
+                                        <p>(6)聽從指揮</p>
+                                        <p>(5)痛覺定位</p>
+                                        <p>(4)收縮反應</p>
+                                        <p>(3)去大腦皮質收縮</p>
+                                        <p>(2)去大腦伸張</p>
+                                        <p>(1)無反應</p>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="title title_g">V最佳言辭反應：</div>
+                                    <div class="tips">
+                                        <p>(5)可對答且定向感正確</p>
+                                        <p>(4)可對答但定向感錯誤</p>
+                                        <p>(3)可發出單詞</p>
+                                        <p>(2)可發出呻吟</p>
+                                        <p>(1)無反應</p>
+                                        <p>(T)氣管內插管或氣切</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!--昏迷指標-->
+        <div class="coma_wrap">
+            <div class="main_title">昏迷指標</div>
+            <div class="formList flex">
+                <div class="subtitle">E睜眼反射：</div>
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary active">
+                        <input type="radio" name="options" id="" autocomplete="off" checked> 4
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="" autocomplete="off"> 3
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="" autocomplete="off"> 2
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="" autocomplete="off"> 1
+                    </label>
+                </div>
+            </div>
+            <div class="formList flex">
+                <div class="subtitle">M最佳運動反應：</div>
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary active">
+                        <input type="radio" name="options" id="" autocomplete="off" checked> 6
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="" autocomplete="off"> 5
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="" autocomplete="off"> 4
+                    </label>
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="" autocomplete="off"> 3
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="" autocomplete="off"> 2
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="" autocomplete="off"> 1
+                    </label>
+                </div>
+            </div>
+            <div class="formList flex">
+                <div class="subtitle">V最佳言辭反應：</div>
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary active">
+                        <input type="radio" name="options" id="" autocomplete="off" checked> 5
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="" autocomplete="off"> 4
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="" autocomplete="off"> 3
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="" autocomplete="off"> 2
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="" autocomplete="off"> 1
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="" autocomplete="off"> T
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!--瞳孔指標-->
+        <div class="main_title">瞳孔指標</div>
+        <div class="formList flex">
+            <label>左眼(L)：</label>
+            <div class="pFormItem">
+                <div class="divFormItem slDivFormItem">
+                    <select id="" class="formItem selectFormItem">
+                        <option value="1">+</option>
+                        <option value="2"></option>
+                    </select>
+                </div>
+            </div>
+            <div class="pFormItem">
+                <div class="divFormItem slDivFormItem">
+                    <select class="formItem selectFormItem">
+                        <option>5.5</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="formList flex">
+            <label>右眼(R)：</label>
+            <div class="pFormItem">
+                <div class="divFormItem slDivFormItem">
+                    <select id="" class="formItem selectFormItem">
+                        <option value="1">C(無法測量)</option>
+                        <option value="2"></option>
+                    </select>
+                </div>
+            </div>
+            <div class="pFormItem">
+                <div class="divFormItem slDivFormItem">
+                    <select class="formItem selectFormItem">
+                        <option>水腫</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!--護理紀錄帶入-->
+        <div class="intake_bottom flex">
+            <div class="choiceBox">
+                <div class="pFormItem">
+                    <div class="divFormItem ckDivFormItem">
+                        <input id="form22_1" name="form22" type="checkbox" class="formItem checkboxFormItem">
+                        <label for="form22_1"></label>
+                    </div>
+                </div>
+            </div>
+            <label>帶入護理紀錄</label>
+            <div class="pFormItem">
+                <div class="divFormItem slDivFormItem">
+                    <select class="formItem selectFormItem">
+                        <option>O</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--JS -->
+<script type="text/javascript" src="../plugins/jquery/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../plugins/pushy.js"></script>
+<script type="text/javascript" src="../js/custom.js"></script>
+</body>
+</html>

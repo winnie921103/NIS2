@@ -1,0 +1,955 @@
+/*基礎css*/
+/*
+    RWD1024_up.css
+        1024up
+        1024px~1366px 橫式 iPad Pro in landscape
+        1024px~1366px 直式 iPad Pro in portrait
+    RWD768_up.css
+        991px down
+        768px~1024px 直式 iPad in portrait
+        768px~1024px 橫式 iPad in landscape
+    RWD767_down.css
+        480~768
+        320~480  通用 ========================= 手機
+        320down  通用 ========================= 小型手機
+    RWD_special.css
+        直式-
+            320px~568px iPhone 5 & 5S portrait直式
+            375px~667px iPhone 6 portrait直式
+        橫式- 320~812
+            320px~480px iPhone 4 landscape橫式
+            320px~568px iPhone 5 & 5S landscape橫式
+            375px~667px iPhone 6 landscape橫式
+            375px~812px iphone X 橫式
+            414px~736px *iPhone 6 plus landscape橫式
+*/
+/* 共用 */
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Microsoft JhengHei', 'Noto Sans TC', 'Open Sans';
+    font-size: 16px;
+    color: #222222;
+    margin: 0px;
+    width: 100%;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+    margin-bottom: 0;
+}
+p {
+    margin-bottom: 0px;
+}
+a{
+    color:#222;
+    text-decoration: none;
+}
+a:hover {
+    color:#222;
+    opacity:0.8 ;
+    text-decoration: none;
+}
+ul{
+    margin-bottom: 0px;
+    padding-left: 0px;
+}
+.form-group{
+    margin-bottom: 0;
+}
+li{
+    list-style-type:none;
+}
+
+img{
+    object-fit: contain;
+}
+label{
+    margin-bottom: 0;
+}
+.flex {
+    display: flex;
+    align-items: center;
+}
+.flex-end {
+    display: flex;
+    align-items: flex-end;
+}
+.inline-flex{
+    display: inline-flex;
+    align-items: center;
+}
+.flex_wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+}
+.between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.none{
+    display: none;
+}
+.bold {
+    font-weight: bold;
+}
+.T_center{
+    text-align: center;
+}
+.T_right{
+    text-align: right;
+}
+.T_left{
+    text-align: left;
+}
+.btn{
+    -webkit-transition: all ease .3s;
+    transition: all ease .3s;
+}
+.btn:hover {
+    -webkit-transition: all ease .3s;
+    transition: all ease .3s;
+}
+body .btn:disabled{
+    background-color: #888;
+    color:#fff;
+    cursor: no-drop;
+}
+body .btn:disabled:hover{
+    transform: translateY(0px);
+}
+.small.btn{
+    padding: 2px 10px;
+    font-size: 0.875rem;
+    margin-left: 5px;
+}
+.red,a.red:hover{
+    color:#fc4f4f;
+}
+.blue{
+    color:#0070c0;
+}
+.whiteBg{
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 8px;
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.2);
+}
+.paddingleft{
+    padding:0px 15px;
+}
+/*表單用寬度*/
+.maxhalf{
+    max-width: 50%;
+    width: 50%;
+}
+.maxWidth{
+    max-width: 100px;
+    width: 100px;
+}
+.remarkWidth{
+    max-width: 500px;
+    width: 500px;
+}
+.tableStatus{
+    max-width: 70px;
+    width: 70px;
+}
+.remarks{
+    width: 18px;
+}
+.main{
+    /*margin-top: 20px ;*/
+    text-align: center;
+}
+/*特殊共用*/
+input{
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: none;
+    border: 1px solid #a5a5a5;
+    padding: 6px 10px;
+}
+input:focus,select:focus{
+    border-radius: 5px;
+    border-color: #2cafd6;
+    outline: none;
+}
+select{
+    width: 100%;
+    border-radius: 5px;
+    background: #C9CCD3;
+    background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
+    background-blend-mode: lighten;
+    box-shadow: 0px 0px 5px 0px rgba(50,50,50,0.2);
+    border: 1px solid #a5a5a5;
+    padding: 6px 10px;
+}
+
+.divFormItem{
+    width: 100%;
+}
+.pFormItem{
+    display: flex;
+    align-items: center;
+}
+.page-wrapper{
+    height: 100vh;
+}
+.footer{
+    width: 100%;
+    background-image: linear-gradient(-225deg, #B7F8DB 0%, #50A7C2 100%);
+    color:#fff;
+    font-size: 0.875rem;
+    padding:5px 0px;
+    position: fixed;
+    bottom: 0;
+}
+/*登入頁*/
+.login{
+    background: url("../image/bg.png") no-repeat;
+    background-size: 100% auto;
+    height: auto;
+}
+.logo{
+    width: 100%;
+    height: auto;
+    margin: 15% auto 20%;
+    text-align: center;
+}
+.logo img{
+    width: 90%;
+}
+.login_wrap{
+    margin: 0 auto 7%;
+    text-align: center;
+    position: relative;
+}
+.login_wrap input{
+    width: 80%;
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 30px;
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.2);
+    margin-bottom: 7%;
+    height: 45px;
+    padding-left: 25px;
+    position: relative;
+}
+.login_btn{
+    width: 80%;
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 30px;
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.2);
+    height: 45px;
+    display: block;
+    text-align: center;
+    line-height: 45px;
+    color: #2cafd6;
+    margin: 0 auto;
+}
+
+.ver_wrap{
+    margin: 15% auto 0;
+    text-align: center;
+}
+.ver_wrap a{
+    width: 60%;
+    background-color: #0d6f98;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.2);
+    height: 45px;
+    display: block;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    margin: 0 auto 4%;
+}
+.ver_wrap span{
+    width: 80%;
+    color: #0d6f98;
+    display: inline-block;
+    text-align: justify-all;
+}
+/*========首頁=======*/
+/*header*/
+.header{
+    position: fixed;
+    top:0px;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(255,255,255,0.85);
+    box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.1);
+    z-index: 2;
+}
+.pushy-open-left .header{
+    left: 200px\0;/*針對IE10以上*/
+}
+.header .logo{
+    display: inline-block;
+    height: 60px;
+    padding:10px 0px;
+}
+.header img{
+    width: 2.5em;
+    height:100%;
+}
+.header .main_btn{
+    position: relative;
+    color: #6d6d6d;
+    font-size: 1.125rem;
+    cursor: pointer;
+    padding: 0px 10px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.header .main_btn:hover::before,.header .main_btn.active::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 4px;
+    background-color: #f9b938;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: hoverMainBtn 0.3s forwards;
+}
+@keyframes hoverMainBtn{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+.header .main_btn .sub_menu{
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    border: 1px solid #f9b938;
+}
+.header .main_btn .sub_menu::before{
+    content: "";
+    position: absolute;
+    width: calc(100% + 2px);
+    height: 4px;
+    background-color: #f9b938;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.header .main_btn .sub_menu a{
+    padding: 10px 0px;
+    border-bottom: 1px solid #f9b938;
+    background-color: rgba(255,255,255,0.95);
+    display: block;
+    opacity: 1;
+}
+.header .main_btn .sub_menu a:hover {
+    background-color: rgba(255, 235, 190, 1);
+    opacity: 1;
+}
+.header .main_btn .sub_menu.active{
+    display: flex;
+}
+@media(max-width:1199px){
+    /*header*/
+    .header{
+        height: 50px;
+    }
+    .header .logo{
+        height: 50px;
+    }
+    .header .main_btn{
+        height: 50px;
+    }
+    .header .main_btn .sub_menu{
+        top: 50px;
+    }
+}
+
+.content .header .container-fluid{
+    padding-left: 0px;
+}
+.content .pushy .title{
+    border-top: 2px solid #62a1b1;
+    border-bottom: 2px solid #62a1b1;
+    text-align: left;
+    padding: 5px 15px;
+    color: #fff;
+    background: #67c8e1;
+}
+/*push*/
+.pushy{
+    background-color: #fffbf3;
+}
+.pushy a,.push_a{
+    color: #6d6d6d;
+    font-weight: bold;
+    text-align: center;
+    background-color: #fff4e1;
+    border-bottom: 1px solid #d9d9d9;
+}
+.pushy a:hover{
+    color: #6d6d6d;
+    background-color: #ffe7be;
+    opacity: 1;
+}
+.content .top{
+    padding: 10px 15px;
+}
+/* nav */
+.icon{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    cursor: pointer;
+    display: inline-block;
+    background-color: #58aec4;
+    margin-right: 5px;
+}
+.icon .iconSpan{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    height: 50%;
+}
+.icon span{
+    background-color:#FFF;
+    position: absolute;
+    border-radius: 2px;
+    transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+    width:100%;
+    height: 4px;
+}
+.icon span:nth-child(1){
+    top:0px;
+    left: 0px;
+}
+.icon span:nth-child(2){
+    top:13px;
+    left: 0px;
+}
+.icon span:nth-child(3){
+    bottom:0px;
+    left: 0px;
+}
+.icon:not(.open):hover span:nth-child(1){
+    transform: scaleX(.8);
+}
+.icon:not(.open):hover span:nth-child(2){
+    transform: scaleX(.5);
+}
+.icon:not(.open):hover span:nth-child(3){
+    transform: scaleX(.8);
+}
+.icon.open span:nth-child(1){
+    transform: rotate(45deg);
+    top: 13px;
+}
+.icon.open span:nth-child(2){
+    transform: scale(0);
+    transition-duration: 50ms
+}
+.icon.open span:nth-child(3){
+    top: 13px;
+    transform: rotate(-45deg);
+}
+
+@media(max-width:1199px){
+    .icon{
+        width: 50px;
+        height: 50px;
+    }
+    .icon .iconSpan{
+        height: 55%;
+    }
+    .icon span:nth-child(2){
+        top:12px;
+    }
+}
+.header select{
+    width: auto;
+    padding: 2px;
+    margin-right: 5px;
+}
+.qrcode{
+    float: left;
+    margin: 0 5px;
+    width: 100%;
+}
+/****iframe****/
+.container{
+    padding: 0 10px;
+}
+#Iframe{
+   height: 38px;
+}
+#myIframe{
+    margin-top: 58px;
+    margin-bottom:10px;
+    min-height: calc(100vh - 110px);
+}
+.iframepage .whiteBg{
+    overflow-y: auto;
+    max-height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px);
+    margin-top: 58px;
+    border-radius: 0px 0px 8px 8px;
+    padding: 0px 0px 15px 0px;
+}
+.iframepage .title.between{
+    padding: 10px 15px;
+    box-shadow: 0px 3px 5px 2px rgba(0,0,0,0.2);
+    z-index: 1;
+    position: fixed;
+    background-color: rgba(255,255,255,0.9);
+    width: calc(100% - 10px);
+    min-height: 58px;
+    left: 0px;
+    border-radius: 8px 8px 0px 0px;
+    margin: 0px 5px;
+    top: 10px;
+}
+body.iframepage{
+    padding:5px 0px;
+    /*background-color: transparent;*/
+}
+.title h3{
+    font-weight: bold;
+    color:#6d6d6d;
+}
+.btn {
+    margin:0 2px;
+    padding: 5px 10px;
+    color: #000;
+    background: #C9CCD3;
+    background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
+    background-blend-mode: lighten;
+    transform: translateY(0px);
+    border-radius: 5px!important;
+}
+.btn:hover {
+    background-color: #f9b938;
+    border: 1px solid #f9b938;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.3);
+}
+/*========病患列表=======*/
+/*表格設定*/
+.table.tableList td{
+    white-space: nowrap;
+}
+.table thead,.table tfoot{
+    background-color: #6d6d6d;
+    color:#fff;
+}
+.table thead th{
+    white-space: nowrap;
+    text-align: center;
+}
+.table th,.table td{
+    position: relative;
+    border-top: none;
+    padding: .5rem .75rem;
+}
+.table td{
+    white-space: normal;
+}
+.table .checkbox,.table .checkboxAll{
+    position: relative;
+    display: block;
+    border-radius: 5px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #888888;
+    background-color: #fff;
+    margin: 0 auto;
+    cursor: pointer;
+    box-sizing: content-box;
+}
+.table .checkbox.checked::before,.table .checkboxAll.checked::before{
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 11px;
+    top: 4px;
+    left: 7px;
+    border: 2px solid #888888;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg);
+}
+.table-striped tbody tr:nth-of-type(odd){
+    background-color: #ffebc2;
+}
+.table-striped tbody tr:nth-of-type(even){
+    background-color: #fffbf3;
+}
+.table-hover tbody tr:nth-of-type(odd):hover{
+    background-color: rgba(0,0,0,.075);
+}
+.p_list{
+    font-size: 1.2em;
+}
+.p_list a {
+    font-weight: bold;
+}
+.table-responsive{
+    margin-top: -25px;
+}
+/*主選單*/
+.mainmenu ul{
+    width: 100%;
+    display: inline-block;
+}
+.mainmenu ul li{
+    display: inline-block;
+    width: 7em;
+    height: 7em;
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    border-radius: 60px;
+    color: #000;
+    padding: 10px;
+    margin: 5px 2px;
+}
+/*
+.mainmenu ul li:first-child{
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+.mainmenu ul li:nth-child(2){
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+.mainmenu ul li:nth-child(3){
+    background-image: linear-gradient(-225deg, #B7F8DB 0%, #50A7C2 100%);
+}
+.mainmenu ul li:nth-child(4){
+    background-image: linear-gradient(-225deg, #B6CEE8 0%, #F578DC 100%);
+}
+.mainmenu ul li:nth-child(5){
+    background-image: linear-gradient(-225deg, #B7F8DB 0%, #50A7C2 100%);
+}
+.mainmenu ul li:last-child{
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}*/
+.mainmenu ul li img{
+    width: 45px;
+    margin: 5px 0;
+}
+/*次選單*/
+.submenu ul{
+    width: 100%;
+    display: inline-block;
+}
+.submenu ul li{
+    display: inline-block;
+    width: 13em;
+    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+    border-radius: 60px;
+    color: #000;
+    padding: 10px;
+    margin: 5px 2px;
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.2);
+}
+/*護理評估次選單*/
+.nursing ul li{
+    display: inline-block;
+    width: 16em;
+    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+    border-radius: 60px;
+    color: #000;
+    padding: 10px;
+    margin: 5px 2px;
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.2);
+}
+/*checkbox*/
+.choiceBox .divFormItem input{
+    width: auto;
+    display: none;
+}
+.choiceBox .divFormItem input+label{
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    text-align: left;
+    min-width: auto;
+    padding: 0px 0px 0px 30px;
+    margin-right: 0;
+    min-height: 14px;
+}
+.formList .titleInput input+label{
+    min-width: auto;
+}
+.choiceBox .divFormItem input+label:before{
+    content:"";
+    position: absolute;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    top:50%;
+    transform: translateY(-50%);
+    border-radius: 3px;
+    border:1px solid #888888;
+    background-color: #fff;
+}
+.choiceBox .divFormItem label.oCkHdFormItem,.choiceBox .divFormItem label.oCkBkFormItem{
+    display: inline;
+    padding:0px;
+}
+.choiceBox .divFormItem input+label.oCkHdFormItem:before,.choiceBox .divFormItem input+label.oCkBkFormItem:before{
+    display: none;
+}
+.choiceBox .divFormItem input:checked+label:after{
+    content: "";
+    position: absolute;
+    left: 11px;
+    width: 9px;
+    height: 15px;
+    top: 44%;
+    border-radius: 3px;
+    border: 4px solid #00aefe;
+    border-top: none;
+    border-left: none;
+    transform: translateY(-50%) rotate(45deg);
+}
+.radioBox .divFormItem .oRdTextFormItem,.choiceBox .divFormItem .oCkTextFormItem{
+    /*單選與多選的input顯示*/
+    display: inline-block;
+    width: 160px;
+}
+.radioBox .divFormItem input+label{
+    position: relative;
+    cursor: pointer;
+    padding-left: 30px;
+    margin-right: 5px;
+    text-align: left;
+}
+.radioBox .divFormItem input+label:before{
+    content:"";
+    position: absolute;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    top:50%;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    border:1px solid #888888;
+}
+.radioBox .divFormItem label.oRdHdFormItem,.radioBox .divFormItem label.oRdBkFormItem{
+    padding-left: 5px;
+}
+.radioBox .divFormItem label.oRdHdFormItem:before,.radioBox .divFormItem label.oRdBkFormItem:before{
+    display: none;
+}
+.radioBox .divFormItem input:checked+label:after{
+    content: "";
+    position: absolute;
+    left: 9px;
+    width: 12px;
+    height: 12px;
+    top: 50%;
+    border-radius: 6px;
+    background-color: #00aefe;
+    transform: translateY(-50%);
+}
+/*intake*/
+.patient_detail{
+    background: #93dcd2;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.patient_content{
+    margin-top: 10px;
+}
+.patient_content .intake_top label{
+    min-width: 6em;
+    border-radius: 5px;
+    background-color: #fff4e1;
+    padding: 7px 5px;
+    margin-right: 5px;
+    text-align: right;
+}
+.patient_content .intake_top .pFormItem .divFormItem{
+    border-radius: 5px;
+    margin-right: 5px;
+}
+.formList{
+    margin-top: 10px;
+}
+.main .patient_content .pFormItem .divFormItem .txBkFormItem{
+    min-width: 2em;
+}
+.insert input{
+    max-width: 10em;
+}
+.intake_bottom{
+    margin-top: 15%;
+}
+.intake_bottom label{
+    margin-right: 10px;
+}
+.timeDivFormItem{
+    width: 4em;
+}
+/*coma*/
+.modal .content{
+    text-align: left;
+    position: relative;
+}
+.modal .title{
+    width: 10em;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    color: #fff;
+    position: absolute;
+    top: -17px;
+    left: 13px;
+}
+.title_r{
+    background: #dc3578;
+}
+.title_g{
+    background: #28a745;
+}
+.title_b{
+    background: #5293d8;
+}
+.modal .tips{
+    padding: 25px 10px 10px 10px;
+    background: #eee;
+    margin: 0 0 25px 0;
+    border: 1px solid #ccc;
+}
+.modal-header{
+    padding: 5px 15px;
+}
+.modal{
+    top: 14px;
+    height: 97%;
+}
+.coma .formList .subtitle{
+    white-space: nowrap;
+}
+.coma .pFormItem .divFormItem {
+    border-radius: 5px;
+    margin:0 5px;
+}
+.coma .main_title{
+    background-image: linear-gradient(45deg, #58aec4 0%, #ffffff 100%);
+    text-align: left;
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+/*fallrisk*/
+.fallrisk .dtDateFormItem{
+    width: 36%;
+}
+.fallrisk .dtTimeFormItem{
+    width: 25%;
+}
+.fallrisk input{
+    border: none;
+    background: none;
+}
+.fallrisk .divFormItem{
+    display: flex;
+}
+.fallrisk .list_wrap{
+    border: 2px solid #fdd073;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.fallrisk .list_wrap .time_title{
+    background-image: linear-gradient(45deg, #f9b938 0%, #ffd889 100%);
+    border-bottom: 2px solid #fdd073;
+}
+.fallrisk .list_wrap .content{
+    text-align: left;
+    padding: 5px 10px;
+    font-size: 1.2em;
+}
+.fallrisk .list_wrap .content span{
+    width: 4em;
+    display: inline-block;
+}
+.fallrisk .top{
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 1.2em;
+    color: #ffffff;
+    font-weight: bold;
+    background: #57acc3;
+    padding: 10px;
+    position: relative;
+}
+.fallrisk .top a{
+    position: absolute;
+    top: 5px;
+    right: 0;
+    margin: 0 10px 0 0;
+}
+.fallrisk .top a:active{
+    transform: translateY(5px);
+}
+/*addfallriskform*/
+.addfallriskform .content{
+    text-align: left;
+    position: relative;
+    margin-top: 30px;
+}
+.addfallriskform .title{
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    color: #fff;
+    position: absolute;
+    top: -17px;
+    left: 13px;
+}
+.addfallriskform .title_o{
+    background: #ed9b2e;
+}
+.addfallriskform .tips{
+    padding: 25px 10px 10px 10px;
+    background: #eee;
+    margin: 0 0 25px 0;
+    border: 1px solid #ccc;
+}
+.addfallriskform .content .btn{
+    width: 100%;
+    text-align: left;
+    margin: 5px 0;
+    background: #fff;
+    background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%);
+    background-blend-mode: lighten;
+}
+.addfallriskform .btn-group, .btn-group-vertical{
+    display: inline-block;
+}
+.addfallriskform .tips span{
+    font-size: 1.2em;
+    color: #dc3545;
+    margin-left: 15px;
+    font-weight: bold;
+}
