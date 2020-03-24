@@ -41,8 +41,8 @@ body{
 .main{
     text-align: center;
     overflow-y: auto;
-    max-height: calc(100vh - 40px);
-    min-height: calc(100vh - 40px);
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
     padding: 0px 0px 40px 0px;
 }
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
