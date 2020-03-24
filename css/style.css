@@ -45,6 +45,9 @@ body{
     height: calc(var(--vh, 1vh) * 100);
     padding: 0px 0px 40px 0px;
 }
+.content{
+    margin-top: 58px;
+}
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
     margin-bottom: 0;
 }
@@ -507,7 +510,6 @@ select{
    height: 38px;
 }
 #myIframe{
-    margin-top: 58px;
     margin-bottom:10px;
     min-height: calc(100vh - 110px);
 }
