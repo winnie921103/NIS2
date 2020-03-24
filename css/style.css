@@ -42,7 +42,8 @@ body{
     text-align: center;
     overflow-y: auto;
     max-height: 100vh;
-    padding: 0px 0px 15px 0px;
+    min-height: 100vh;
+    padding: 0px 0px 40px 0px;
 }
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
     margin-bottom: 0;
