@@ -506,9 +506,10 @@ select{
    height: 38px;
 }
 #myIframe{
-    margin-bottom:10px;
+   padding-bottom:10px;
     min-height: calc(100vh - 90px);
-    margin-top: 58px;
+    /*margin-top: 58px;*/
+    padding-top: 58px;
 }
 .iframepage{
     overflow-y: auto;
